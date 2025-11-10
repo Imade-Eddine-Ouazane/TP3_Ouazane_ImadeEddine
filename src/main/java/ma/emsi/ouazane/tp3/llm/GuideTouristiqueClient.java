@@ -27,7 +27,7 @@ public class GuideTouristiqueClient implements GuideTouristique {
                 .build();
     }
 
-    public String ask(String lieu) {
-        return guide.ask(lieu);
+    public String ask(String lieu, int nombre) {
+        return guide.ask(lieu, nombre);
     }
 }

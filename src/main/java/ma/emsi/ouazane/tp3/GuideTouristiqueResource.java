@@ -13,10 +13,10 @@ public class GuideTouristiqueResource {
     @Inject
     private GuideTouristiqueClient client;
     @GET
-    @Path("/lieu/{ville_ou_pays}")
+    @Path("/lieu/{ville_ou_pays}/{nombre}")
     @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
-    public String getGuide(@PathParam("ville_ou_pays") String ville_ou_pays) {
-        return client.ask(ville_ou_pays);
+    public String getGuide(@PathParam("ville_ou_pays") String ville_ou_pays,@PathParam("nombre") int nombre) {
+        return client.ask(ville_ou_pays,nombre);
     }
 
 }
